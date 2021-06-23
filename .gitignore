@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2021, microG Project Team
+# SPDX-License-Identifier: CC0-1.0
+
+.gradle/
+/chromium/
+/depot_tools/
+/package/build/
+/package/*/build/
+/package/*/libs/*.jar
+/package/cronet-native/src/main/jniLibs/*/*.so

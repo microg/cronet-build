@@ -1,4 +1,6 @@
 #!/bin/bash
+# SPDX-FileCopyrightText: 2021, microG Project Team
+# SPDX-License-Identifier: Apache-2.0
 
 CHROMIUM_TAG=92.0.4509.1
 CHROMIUM_REVISION=0d13b24e08018afd3e9eabcc9ba9820d10cd18a0

@@ -1,0 +1,38 @@
+/*
+ * SPDX-FileCopyrightText: 2021, microG Project Team
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+buildscript {
+    ext.androidBuildGradleVersion = '4.1.0'
+
+    ext.androidBuildVersionTools = '30.0.2'
+
+    ext.androidMinSdk = 14
+    ext.androidTargetSdk = 29
+    ext.androidCompileSdk = 30
+
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:$androidBuildGradleVersion"
+    }
+}
+
+allprojects {
+    apply plugin: 'idea'
+
+    group = 'org.microg'
+    version = '92.0.4509.1'
+}
+
+subprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
