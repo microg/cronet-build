@@ -19,7 +19,7 @@ afterEvaluate {
                 pom {
                     name = project.name
                     description = project.description
-                    url = 'https://github.com/microg/cronet'
+                    url = 'https://github.com/microg/cronet-build'
                     licenses {
                         license {
                             name = 'The Apache Software License, Version 2.0'
@@ -37,9 +37,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        url = 'https://github.com/microg/cronet'
-                        connection = 'scm:git:https://github.com/microg/cronet.git'
-                        developerConnection = 'scm:git:ssh://github.com/microg/cronet.git'
+                        url = 'https://github.com/microg/cronet-build'
+                        connection = 'scm:git:https://github.com/microg/cronet-build.git'
+                        developerConnection = 'scm:git:ssh://github.com/microg/cronet-build.git'
                     }
                 }
 
