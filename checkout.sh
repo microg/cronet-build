@@ -2,8 +2,8 @@
 # SPDX-FileCopyrightText: 2021, microG Project Team
 # SPDX-License-Identifier: Apache-2.0
 
-CHROMIUM_TAG=92.0.4509.1
-CHROMIUM_REVISION=0d13b24e08018afd3e9eabcc9ba9820d10cd18a0
+CHROMIUM_TAG=91.0.4472.120
+CHROMIUM_REVISION=1deed0e8f4a3706fdcaf58d3d7604a64cfbceab8
 
 ROOT=$PWD
 
@@ -30,7 +30,8 @@ fi
 cd "$ROOT/chromium/src"
 
 echo "## Fetching chromium..."
-git fetch -q --depth=1 origin "$CHROMIUM_REVISION"
+# We need to make sure we have the commit with latest Change-Id
+git fetch -q --depth=20 origin "$CHROMIUM_REVISION"
 git checkout --detach "$CHROMIUM_REVISION"
 git checkout "$CHROMIUM_REVISION"
 

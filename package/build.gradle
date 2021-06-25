@@ -26,7 +26,7 @@ allprojects {
     apply plugin: 'idea'
 
     group = 'org.microg'
-    version = '92.0.4509.1'
+    version = '91.0.4472.120'
 }
 
 subprojects {
