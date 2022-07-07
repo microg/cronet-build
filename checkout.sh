@@ -7,17 +7,17 @@ CHROMIUM_REVISION=c77ce0c0fc9ea1554d15ff6c72a7670268b128e4
 
 ROOT=$PWD
 
-if ! [ -d depot_tools ]; then
+if ! [ -d "$ROOT/depot_tools" ]; then
   echo "## Preparing depot_tools..."
   git clone "https://chromium.googlesource.com/chromium/tools/depot_tools.git"
 fi
 
 PATH=$ROOT/depot_tools:$PATH
 
-if ! [ -d chromium ]; then
+if ! [ -d "$ROOT/chromium" ]; then
   echo "## Initializing chromium..."
-  mkdir chromium
-  cd chromium
+  mkdir "$ROOT/chromium"
+  cd "$ROOT/chromium"
 
   gclient config "https://chromium.googlesource.com/chromium/src.git"
   echo 'target_os = ["android"]' >> .gclient
@@ -36,4 +36,4 @@ git checkout --detach "$CHROMIUM_REVISION"
 git checkout "$CHROMIUM_REVISION"
 
 echo "## Running gclient sync..."
-gclient sync --no-history --nohooks --revision=$CHROMIUM_REVISION
+gclient sync -D --no-history --nohooks --revision=$CHROMIUM_REVISION

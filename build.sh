@@ -34,6 +34,7 @@ build() {
       enable_reporting=true
       use_hashed_jni_names=true
   "
+  rm -rf "out/Release-$ARCH/cronet/"
   gn gen "out/Release-$ARCH" --args="$GN_ARGS target_cpu=\"$ARCH\" $EXTRA_ARGS"
   ninja -C "out/Release-$ARCH" cronet_package
 }
